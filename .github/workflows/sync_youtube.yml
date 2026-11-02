@@ -1,0 +1,40 @@
+name: Auto Sync YouTube Live & Videos
+
+on:
+  schedule:
+    # 每天自動執行 4 次（台灣時間 06:15, 12:15, 18:15, 00:15）
+    - cron: '15 0,6,12,18 * * *'
+  workflow_dispatch: # 支援手動一鍵觸發
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  sync-youtube:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch latest YouTube videos from @imoneylove
+        run: python scripts/update_videos.py
+
+      - name: Commit and push if updated
+        run: |
+          git config --global user.name "imoneylove-bot"
+          git config --global user.email "b9234060@users.noreply.github.com"
+          git add videos.json
+          if git diff --staged --quiet; then
+            echo "No new YouTube updates."
+          else
+            git commit -m "chore(auto-sync): update latest YouTube live & videos"
+            git push
+          fi
