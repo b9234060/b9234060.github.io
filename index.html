@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>i級投資客日記 | 不動產投資解決方案 × 總經籌碼實戰 × 資產抗通膨</title>
+  <meta name="description" content="i級投資客日記 (@imoneylove) 官方網站。每日更新 YouTube 實況直播、總經油價與房市預測模型、台美股籌碼技術分析、轉增貸現金流閉環與財富自由真相。" />
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/273367786?v=4" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              bg: '#06080F',
+              card: '#0D121F',
+              border: '#1E293B',
+              gold: '#F59E0B',
+              cyan: '#06B6D4',
+              indigo: '#6366F1'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #06080F;
+      color: #F8FAFC;
+      overflow-x: hidden;
+    }
+    /* Roamer-Tech inspired subtle ambient background & grid */
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .glass-card {
+      background: rgba(13, 18, 31, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(6, 182, 212, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px -15px rgba(6, 182, 212, 0.15);
+    }
+    .glow-badge {
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 50%, #38BDF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #D97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #06080F;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E293B;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+<body class="bg-grid-pattern antialiased selection:bg-cyan-500 selection:text-black">
+
+  <!-- Ambient Glow Orbs -->
+  <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-indigo-600/15 blur-[130px] pointer-events-none z-0"></div>
+  <div class="fixed top-[20%] right-[-10%] w-[450px] h-[450px] rounded-full bg-cyan-500/10 blur-[130px] pointer-events-none z-0"></div>
+  <div class="fixed bottom-[-10%] left-[30%] w-[500px] h-[500px] rounded-full bg-amber-500/10 blur-[140px] pointer-events-none z-0"></div>
+
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-[#06080F]/80 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="relative">
+          <img src="https://avatars.githubusercontent.com/u/273367786?v=4" alt="i級投資客日記" class="w-11 h-11 rounded-full object-cover ring-2 ring-amber-500/60 group-hover:ring-cyan-400 transition" />
+          <span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-emerald-500 border-2 border-[#06080F] rounded-full animate-pulse" title="每日直播自動同步中"></span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-lg tracking-tight text-white">i級投資客日記</span>
+            <span class="text-[11px] font-mono uppercase px-2 py-0.5 rounded bg-amber-500/15 text-amber-400 border border-amber-500/30">Official</span>
+          </div>
+          <p class="text-xs text-slate-400 font-mono">@imoneylove · 資產抗通膨 × 總經實戰</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#live-hub" class="hover:text-cyan-400 transition">每日直播覆盤</a>
+        <a href="#video-archive" class="hover:text-cyan-400 transition">全頻道影音庫</a>
+        <a href="#core-strategy" class="hover:text-cyan-400 transition">四大實戰模型</a>
+        <a href="#truths" class="hover:text-cyan-400 transition">致富真相語錄</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://www.youtube.com/channel/UCyA2CTG24GR9-P2mgz61sOA/join" target="_blank" rel="noopener"
+           class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold bg-amber-500/10 text-amber-300 border border-amber-500/30 hover:bg-amber-500/20 transition">
+          <span>👑 加入會員「進擊的投資客」</span>
+        </a>
+        <a href="https://www.youtube.com/@imoneylove?sub_confirmation=1" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-gradient-to-r from-red-600 to-rose-600 text-white hover:from-red-500 hover:to-rose-500 shadow-lg shadow-red-600/25 transition">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span>訂閱 YouTube</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Roamer-Tech Inspired Architecture) -->
+  <section class="relative z-10 pt-12 pb-16 lg:pt-20 lg:pb-24 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
+        <div class="max-w-3xl space-y-6">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+            <span id="sync-status-badge">LIVE AUTO-SYNC ENGINE · 每日直播自動同步系統啟動中</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15]">
+            買下<span class="gold-gradient-text">「不用上班的選擇權」</span><br />
+            <span class="gradient-text">不動產與總經籌碼實戰系統</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+            我是 <strong class="text-white">i級投資客</strong>。28 歲時看見在國防部幹 20 年只能賺 375 萬台幣，毅然決然開除國防部——因為當年我買了 8 間不動產，1 間就是 375 萬。本官網每日自動同步 YouTube 最新市場直播、簡報筆記與實戰預測模型，不賣破銅爛鐵，只揭露我親自驗證的致富真相。
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#live-hub" class="px-6 py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25 hover:opacity-95 transition flex items-center gap-2">
+              <span>▶ 觀看今日最新直播與重點筆記</span>
+            </a>
+            <a href="https://www.youtube.com/playlist?list=UUMOyA2CTG24GR9-P2mgz61sOA" target="_blank" rel="noopener"
+               class="px-6 py-3.5 rounded-xl font-semibold text-sm bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 transition">
+              🔒 會員專屬影片片單
+            </a>
+            <a href="https://www.youtube.com/watch?v=c2WiaYMj2Ok" target="_blank" rel="noopener"
+               class="px-5 py-3.5 rounded-xl font-semibold text-sm bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/25 transition">
+              🏡 房地合一破解實戰
+            </a>
+          </div>
+        </div>
+
+        <!-- Stats / Identity Card -->
+        <div class="w-full lg:w-[380px] glass-card rounded-2xl p-6 space-y-5 border border-white/10">
+          <div class="flex items-center gap-4 pb-4 border-b border-white/10">
+            <img src="https://avatars.githubusercontent.com/u/273367786?v=4" alt="i級投資客" class="w-16 h-16 rounded-2xl object-cover ring-2 ring-amber-400/50" />
+            <div>
+              <div class="text-xs font-mono text-amber-400 uppercase tracking-wider">FOUNDER & TRADER</div>
+              <h2 class="text-xl font-bold text-white">i級投資客日記</h2>
+              <p class="text-xs text-slate-400">時薪門檻 &gt; $5,000 USD 思維體系</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-3 text-center">
+            <div class="bg-white/5 rounded-xl p-3 border border-white/5">
+              <div class="text-2xl font-black text-amber-400 font-mono">1,300+</div>
+              <div class="text-xs text-slate-400 mt-1">實戰直播與簡報集數</div>
+            </div>
+            <div class="bg-white/5 rounded-xl p-3 border border-white/5">
+              <div class="text-2xl font-black text-cyan-400 font-mono">5 大資產</div>
+              <div class="text-xs text-slate-400 mt-1">房產·證券·公司·金銀·藏品</div>
+            </div>
+          </div>
+          <div class="text-xs text-slate-300 bg-amber-500/10 border border-amber-500/20 rounded-xl p-3.5 leading-relaxed">
+            <span class="font-bold text-amber-400">⚡ 核心鐵律：</span>
+            「房產與有價證券是拿來『收租』與『轉增貸抽資金』的，絕不是拿來榨乾月薪的。」
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Latest Live & Daily Briefing Hub -->
+  <section id="live-hub" class="relative z-10 py-16 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <div class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-1">DAILY LIVE STREAM & EXECUTIVE BRIEFING</div>
+          <h2 class="text-2xl sm:text-3xl font-black text-white flex items-center gap-3">
+            <span>🔥 最新直播與核心重點覆盤</span>
+          </h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <span id="last-updated-text" class="text-xs font-mono text-slate-400">正在同步最新 YouTube 頻道資料...</span>
+          <button onclick="manualRefresh()" class="px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 hover:bg-white/10 text-cyan-300 border border-white/10 transition">
+            ↻ 立即刷新
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Featured Player + Notes Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Video Player Column -->
+        <div class="lg:col-span-7 glass-card rounded-2xl overflow-hidden border border-white/10">
+          <div class="relative pt-[56.25%] bg-black">
+            <iframe id="main-player-iframe"
+                    class="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/4pXscJy0Rs4?rel=0"
+                    title="i級投資客日記 最新直播"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span id="main-video-badge" class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-red-500/20 text-red-300 border border-red-500/30">
+                ● 最新直播焦點
+              </span>
+              <span id="main-video-date" class="text-xs font-mono text-slate-400"></span>
+              <span id="main-video-views" class="text-xs font-mono text-amber-400 ml-auto"></span>
+            </div>
+            <h3 id="main-video-title" class="text-xl sm:text-2xl font-bold text-white leading-snug">
+              第1300集 不動產有感上漲看油價預測模型 #直播20261031
+            </h3>
+            <div class="pt-2 flex flex-wrap gap-3">
+              <a id="main-video-yt-link" href="https://www.youtube.com/watch?v=4pXscJy0Rs4" target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-lg bg-white/10 hover:bg-white/15 text-white transition">
+                <span>在 YouTube 開啟並參與留言 →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Structured Notes & Timestamps Column -->
+        <div class="lg:col-span-5 glass-card rounded-2xl p-6 space-y-6 border border-white/10 max-h-[620px] overflow-y-auto">
+          <div>
+            <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
+              <h4 class="text-sm font-bold text-amber-400 font-mono uppercase tracking-wider">📌 本集核心重點與時間軸筆記</h4>
+              <span class="text-[11px] text-slate-400 font-mono">AUTO-PARSED</span>
+            </div>
+            <div id="main-video-notes" class="space-y-4 text-sm text-slate-300 leading-relaxed">
+              <!-- Populated dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Automated Video Archive Section -->
+  <section id="video-archive" class="relative z-10 py-16 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="text-xs font-mono text-amber-400 uppercase tracking-widest mb-1">AUTOMATED YOUTUBE ARCHIVE</div>
+          <h2 class="text-2xl sm:text-3xl font-black text-white">📺 頻道最新直播、集數簡報與投資心法</h2>
+          <p class="text-sm text-slate-400 mt-1">點擊任一影片即可直接在上方播放器觀看並載入該集時間軸與重點筆記</p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="filterVideos('all')" id="tab-all" class="filter-tab px-4 py-2 rounded-xl text-xs font-bold bg-cyan-500 text-black transition">
+            全部內容
+          </button>
+          <button onclick="filterVideos('live')" id="tab-live" class="filter-tab px-4 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10 transition">
+            🔴 實況直播覆盤
+          </button>
+          <button onclick="filterVideos('briefing')" id="tab-briefing" class="filter-tab px-4 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10 transition">
+            📊 集數精華簡報
+          </button>
+          <button onclick="filterVideos('mindset')" id="tab-mindset" class="filter-tab px-4 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10 transition">
+            💡 投資心法短片
+          </button>
+        </div>
+      </div>
+
+      <!-- Video Cards Grid -->
+      <div id="video-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Investment Pillars (Roamer-Tech B2B Solution Style) -->
+  <section id="core-strategy" class="relative z-10 py-16 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="text-xs font-mono text-cyan-400 uppercase tracking-widest">CORE FRAMEWORKS & MODELS</div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white">i級投資客 四大實戰決策系統</h2>
+        <p class="text-slate-400 text-sm sm:text-base">結合總體經濟、不動產融資槓桿、台美股籌碼型態與跨區套利，建立睡覺都有收入的抗通膨護城河。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass-card rounded-2xl p-7 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-lg bg-amber-500/15 text-amber-400 font-mono text-xs font-bold border border-amber-500/30">MODEL 01 · 不動產閉環</span>
+            <span class="text-2xl">🏢</span>
+          </div>
+          <h3 class="text-xl font-bold text-white">實體不動產「無斷頭功能」× 轉增貸現金流閉環</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            賣房賺價差扣完房地合一稅與仲介費後，重買同級房產等於資產歸零。核心做法是<strong>絕不輕易賣房</strong>，持有並透過跨區詢問 30–60 間銀行分行進行<strong>轉增貸抽資金</strong>，免稅搬出高成數現金流，讓租客與通膨繼續幫你養房貸。
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-lg bg-cyan-500/15 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/30">MODEL 02 · 總經與通膨預測</span>
+            <span class="text-2xl">🛢️</span>
+          </div>
+          <h3 class="text-xl font-bold text-white">CRB 指數、油價模型與 AI 算力硬體通膨週期</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            交叉比對國泰、信義房價指數與 CRB 原物料指數、油價關鍵轉折點，加上 AI 算力消耗帶動的實質硬體通膨，精準預判房市與資產價格有感噴出時機，提前卡位下一個世代勇者接棒的財富浪潮。
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-lg bg-indigo-500/15 text-indigo-400 font-mono text-xs font-bold border border-indigo-500/30">MODEL 03 · 籌碼與型態判讀</span>
+            <span class="text-2xl">📉</span>
+          </div>
+          <h3 class="text-xl font-bold text-white">葛蘭碧八大法則 × 選擇權 Put/Call 與主力分點追蹤</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            緊盯費城半導體指數、M 頭（麥當勞）高檔背離型態、選擇權賣權（Put）避險部位異動，以及關鍵券商分點（如大額出貨訊號），在安全出口關閉前果斷撤退或布局戰後重建與週期底部十倍風口。
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-lg bg-emerald-500/15 text-emerald-400 font-mono text-xs font-bold border border-emerald-500/30">MODEL 04 · 利差匯率套利</span>
+            <span class="text-2xl">💱</span>
+          </div>
+          <h3 class="text-xl font-bold text-white">跨區銀行寬限期測試 × 台美利差保護套利策略</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            銀行放款與寬限期沒有統一標準，透過實戰跨區詢價取得低利台幣資金（如 2%），搭配高息美金定存或收息資產（如 4%+），在穩定正利差保護傘下順勢賺取匯率波動與資本利得。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Truths Manifesto Section -->
+  <section id="truths" class="relative z-10 py-16 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <div class="text-xs font-mono text-amber-400 uppercase tracking-widest mb-1">THE MANIFESTO OF FREEDOM</div>
+          <h2 class="text-3xl font-black text-white">⚡ i級投資客：我都在用的「真相」語錄</h2>
+          <p class="text-sm text-slate-400 mt-1">本頻道為個人成長日記，不賣破銅爛鐵，也不教一夜暴富。只揭露通往五大自由的真相。</p>
+        </div>
+        <div class="text-xs font-mono text-slate-400 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
+          時間自由 · 人身自由 · 財富自由 · 精神自由 · 靈魂自由
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="glass-card p-5 rounded-xl border border-white/10">
+          <div class="text-xs font-mono text-amber-400 mb-1">TRUTH 01</div>
+          <p class="text-sm font-semibold text-white">房產與有價證券是拿來「收租」的，不是拿來榨乾月薪的。</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl border border-white/10">
+          <div class="text-xs font-mono text-amber-400 mb-1">TRUTH 02</div>
+          <p class="text-sm font-semibold text-white">光靠薪水這輩子 99% 注定與財富自由無緣，上班是沒有未來的。</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl border border-white/10">
+          <div class="text-xs font-mono text-amber-400 mb-1">TRUTH 03</div>
+          <p class="text-sm font-semibold text-white">投資成為投資客、創業成為企業家，致富只有這 2 種模式。</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl border border-white/10">
+          <div class="text-xs font-mono text-cyan-400 mb-1">TRUTH 06</div>
+          <p class="text-sm font-semibold text-white">資產是你睡覺都有收入的東西：房產、證券、公司、黃金白銀、收藏品這 5 種。</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl border border-white/10">
+          <div class="text-xs font-mono text-cyan-400 mb-1">TRUTH 11 & 12</div>
+          <p class="text-sm font-semibold text-white">花時間省錢無法致富，省下時間去創富才能致富。投資的終極目的是買下「不用上班的選擇權」。</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl border border-white/10">
+          <div class="text-xs font-mono text-cyan-400 mb-1">TRUTH 18 & 19</div>
+          <p class="text-sm font-semibold text-white">靠心智賺錢不要用時間換錢。找到你熱愛的事，你就脫離了競爭——別人的努力是硬撐，你的專注是享受。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 py-12 bg-[#04060B] text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="https://avatars.githubusercontent.com/u/273367786?v=4" alt="i級投資客日記" class="w-9 h-9 rounded-full" />
+        <div>
+          <span class="font-bold text-white">i級投資客日記 (@imoneylove)</span>
+          <p class="text-xs text-slate-500">不動產投資解決方案 × 資產抗通膨增值工具 · 人生終究是場夢，我盡全力幫助你</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-5 text-xs">
+        <a href="https://www.youtube.com/@imoneylove" target="_blank" rel="noopener" class="hover:text-white transition">YouTube 主頻道</a>
+        <a href="https://www.youtube.com/channel/UCyA2CTG24GR9-P2mgz61sOA/join" target="_blank" rel="noopener" class="hover:text-amber-400 transition">加入頻道會員</a>
+        <a href="https://www.youtube.com/playlist?list=UUMOyA2CTG24GR9-P2mgz61sOA" target="_blank" rel="noopener" class="hover:text-cyan-400 transition">會員專屬影片</a>
+        <a href="https://github.com/b9234060" target="_blank" rel="noopener" class="hover:text-white transition">GitHub 自動化中心</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client-Side Zero-Maintenance Auto-Sync Script -->
+  <script>
+    const CHANNEL_ID = 'UCyA2CTG24GR9-P2mgz61sOA';
+    const RSS_JSON_API = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent('https://www.youtube.com/feeds/videos.xml?channel_id=' + CHANNEL_ID)}`;
+
+    let allVideos = [];
+    let currentFilter = 'all';
+
+    function classifyVideo(title) {
+      if (title.includes('#直播') || (title.includes('第') && title.includes('集') && !title.includes('簡報'))) {
+        return 'live';
+      }
+      if (title.includes('簡報')) {
+        return 'briefing';
+      }
+      return 'mindset';
+    }
+
+    function parseDescription(desc) {
+      if (!desc) return { points: [], timestamps: [] };
+      const lines = desc.split(/\r?\n/);
+      const points = [];
+      const timestamps = [];
+      let inCore = false;
+
+      for (const raw of lines) {
+        const s = raw.trim();
+        if (s.includes('本集核心重點')) {
+          inCore = true;
+          continue;
+        }
+        if (/^\d{2}:\d{2}(:\d{2})?\s+/.test(s)) {
+          const firstSpace = s.indexOf(' ');
+          timestamps.push({
+            time: s.slice(0, firstSpace).trim(),
+            label: s.slice(firstSpace + 1).trim()
+          });
+        } else if (inCore && (s.startsWith('•') || s.startsWith('-') || s.startsWith('▪'))) {
+          points.push(s.replace(/^[•\-▪]\s*/, '').trim());
+        }
+      }
+      return { points: points.slice(0, 5), timestamps: timestamps.slice(0, 10) };
+    }
+
+    function formatDate(isoStr) {
+      if (!isoStr) return '';
+      const d = new Date(isoStr);
+      if (isNaN(d)) return isoStr;
+      return d.toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' });
+    }
+
+    function getCategoryBadge(cat) {
+      if (cat === 'live') {
+        return `<span class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-red-500/20 text-red-300 border border-red-500/30">🔴 實況直播</span>`;
+      }
+      if (cat === 'briefing') {
+        return `<span class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">📊 集數簡報</span>`;
+      }
+      return `<span class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">💡 投資心法</span>`;
+    }
+
+    function selectFeaturedVideo(video, scrollToPlayer = false) {
+      if (!video) return;
+      document.getElementById('main-player-iframe').src = `https://www.youtube.com/embed/${video.videoId}?rel=0`;
+      document.getElementById('main-video-title').textContent = video.title;
+      document.getElementById('main-video-date').textContent = `發布日期：${formatDate(video.published)}`;
+      document.getElementById('main-video-views').textContent = video.views ? `👁 ${video.views.toLocaleString()} 次觀看` : '';
+      document.getElementById('main-video-yt-link').href = `https://www.youtube.com/watch?v=${video.videoId}`;
+
+      const notesContainer = document.getElementById('main-video-notes');
+      let html = '';
+
+      if (video.summaryPoints && video.summaryPoints.length > 0) {
+        html += `<div class="space-y-2.5">
+          <div class="text-xs font-mono text-cyan-400 font-semibold">▎本集核心重點摘要：</div>
+          <ul class="space-y-2">
+            ${video.summaryPoints.map(p => `<li class="p-3 rounded-xl bg-white/5 border border-white/5 text-xs sm:text-sm text-slate-200 leading-relaxed">• ${p}</li>`).join('')}
+          </ul>
+        </div>`;
+      }
+
+      if (video.timestamps && video.timestamps.length > 0) {
+        html += `<div class="space-y-2 pt-2">
+          <div class="text-xs font-mono text-amber-400 font-semibold">▎直播實戰時間軸（點擊跳轉秒數）：</div>
+          <div class="space-y-1.5">
+            ${video.timestamps.map(ts => {
+              const parts = ts.time.split(':').map(Number);
+              const secs = parts.length === 3 ? parts[0]*3600 + parts[1]*60 + parts[2] : parts[0]*60 + parts[1];
+              return `<button onclick="seekVideo('${video.videoId}', ${secs})" class="w-full text-left p-2.5 rounded-lg bg-white/[0.03] hover:bg-cyan-500/15 border border-white/5 hover:border-cyan-500/30 transition flex items-start gap-2.5 group">
+                <span class="font-mono text-xs text-cyan-400 group-hover:text-cyan-300 shrink-0">${ts.time}</span>
+                <span class="text-xs text-slate-300 group-hover:text-white">${ts.label}</span>
+              </button>`;
+            }).join('')}
+          </div>
+        </div>`;
+      }
+
+      if (!html) {
+        const cleanDesc = (video.description || '').split('■')[0].trim();
+        html = `<div class="p-4 rounded-xl bg-white/5 border border-white/5 text-xs sm:text-sm text-slate-300 whitespace-pre-line leading-relaxed">${cleanDesc || '點擊左側播放器直接收看本集完整內容。'}</div>`;
+      }
+
+      notesContainer.innerHTML = html;
+
+      if (scrollToPlayer) {
+        document.getElementById('live-hub').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function seekVideo(videoId, seconds) {
+      document.getElementById('main-player-iframe').src = `https://www.youtube.com/embed/${videoId}?start=${seconds}&autoplay=1&rel=0`;
+    }
+
+    function renderVideoGrid() {
+      const grid = document.getElementById('video-grid');
+      const filtered = currentFilter === 'all'
+        ? allVideos
+        : allVideos.filter(v => v.category === currentFilter);
+
+      grid.innerHTML = filtered.map(v => `
+        <article onclick="selectByVideoId('${v.videoId}')" class="glass-card rounded-2xl overflow-hidden cursor-pointer group flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-video bg-slate-900 overflow-hidden">
+              <img src="https://i.ytimg.com/vi/${v.videoId}/hqdefault.jpg"
+                   alt="${v.title.replace(/"/g, '&quot;')}"
+                   loading="lazy"
+                   class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute top-3 left-3">
+                ${getCategoryBadge(v.category)}
+              </div>
+              <div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-black/70 text-[11px] font-mono text-slate-200">
+                ${formatDate(v.published)}
+              </div>
+            </div>
+            <div class="p-5 space-y-2.5">
+              <h3 class="font-bold text-base text-white group-hover:text-cyan-400 transition line-clamp-2 leading-snug">
+                ${v.title}
+              </h3>
+              ${v.summaryPoints && v.summaryPoints.length > 0
+                ? `<p class="text-xs text-slate-400 line-clamp-2 leading-relaxed">${v.summaryPoints[0]}</p>`
+                : `<p class="text-xs text-slate-400 line-clamp-2 leading-relaxed">${(v.description || '').replace(/\s+/g, ' ').slice(0, 90)}...</p>`
+              }
+            </div>
+          </div>
+          <div class="px-5 pb-4 pt-2 border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
+            <span>${v.views ? `👁 ${v.views.toLocaleString()} 次觀看` : 'YouTube 頻道影片'}</span>
+            <span class="text-cyan-400 group-hover:translate-x-1 transition">立即播放 →</span>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function selectByVideoId(videoId) {
+      const found = allVideos.find(v => v.videoId === videoId);
+      if (found) selectFeaturedVideo(found, true);
+    }
+
+    function filterVideos(cat) {
+      currentFilter = cat;
+      ['all', 'live', 'briefing', 'mindset'].forEach(k => {
+        const btn = document.getElementById('tab-' + k);
+        if (k === cat) {
+          btn.className = 'filter-tab px-4 py-2 rounded-xl text-xs font-bold bg-cyan-500 text-black transition';
+        } else {
+          btn.className = 'filter-tab px-4 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10 transition';
+        }
+      });
+      renderVideoGrid();
+    }
+
+    async function loadVideos() {
+      let loadedVideos = [];
+      let lastSyncTime = '';
+
+      // 1. Load pre-built videos.json (updated by GitHub Actions daily)
+      try {
+        const res = await fetch('./videos.json?t=' + Date.now());
+        if (res.ok) {
+          const data = await res.json();
+          loadedVideos = data.videos || [];
+          lastSyncTime = data.lastUpdated;
+        }
+      } catch (e) {
+        console.warn('Fallback to live RSS feed:', e);
+      }
+
+      // 2. Also fetch real-time YouTube RSS feed via rss2json so brand new live streams appear immediately with zero delay
+      try {
+        const liveRes = await fetch(RSS_JSON_API);
+        if (liveRes.ok) {
+          const liveData = await liveRes.json();
+          if (liveData.status === 'ok' && Array.isArray(liveData.items)) {
+            const map = new Map();
+            loadedVideos.forEach(v => map.set(v.videoId, v));
+
+            for (const item of liveData.items) {
+              const vidMatch = (item.guid || item.link || '').match(/(?:v=|video:)([a-zA-Z0-9_-]{11})/);
+              const videoId = vidMatch ? vidMatch[1] : '';
+              if (!videoId) continue;
+
+              const existing = map.get(videoId);
+              const parsed = parseDescription(item.description || item.content || '');
+              map.set(videoId, {
+                videoId,
+                title: item.title,
+                published: item.pubDate ? item.pubDate.replace(' ', 'T') + 'Z' : (existing?.published || ''),
+                views: existing?.views || 0,
+                category: classifyVideo(item.title),
+                summaryPoints: parsed.points.length ? parsed.points : (existing?.summaryPoints || []),
+                timestamps: parsed.timestamps.length ? parsed.timestamps : (existing?.timestamps || []),
+                description: item.description || existing?.description || ''
+              });
+            }
+            loadedVideos = Array.from(map.values()).sort((a, b) => (b.published || '').localeCompare(a.published || ''));
+            lastSyncTime = new Date().toISOString();
+          }
+        }
+      } catch (e) {
+        // Ignore live RSS CORS error if videos.json succeeded
+      }
+
+      allVideos = loadedVideos;
+      if (allVideos.length > 0) {
+        // Prefer picking the newest full live stream (#直播) or briefing with rich notes as the default hero video
+        const featured = allVideos.find(v => v.category === 'live' && v.timestamps && v.timestamps.length > 0) || allVideos[0];
+        selectFeaturedVideo(featured, false);
+        renderVideoGrid();
+      }
+
+      const statusEl = document.getElementById('last-updated-text');
+      if (statusEl) {
+        statusEl.textContent = `⚡ 已自動同步 @imoneylove 最新頻道內容（共 ${allVideos.length} 部精選影片）`;
+      }
+    }
+
+    function manualRefresh() {
+      document.getElementById('last-updated-text').textContent = '正在即時抓取 YouTube 最新直播...';
+      loadVideos();
+    }
+
+    document.addEventListener('DOMContentLoaded', loadVideos);
+  </script>
+</body>
+</html>
