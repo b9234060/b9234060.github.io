@@ -1,0 +1,69 @@
+name: Auto Sync Facebook Articles
+
+on:
+  schedule:
+    # 每天自動執行 4 次（台灣時間 06:30, 12:30, 18:30, 00:30）
+    - cron: '30 0,6,12,18 * * *'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [sync-fb-post]
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  sync-facebook:
+    if: >-
+      github.event_name != 'issues' ||
+      (
+        github.event.issue.user.login == 'b9234060' &&
+        (
+          contains(github.event.issue.labels.*.name, 'fb-post') ||
+          startsWith(github.event.issue.title, '[FB]')
+        )
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Sync Facebook posts
+        env:
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "issues" ]; then
+            python scripts/update_fb_posts.py --from-issue "$GITHUB_EVENT_PATH"
+          elif [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            python scripts/update_fb_posts.py --from-payload "$GITHUB_EVENT_PATH"
+          else
+            python scripts/update_fb_posts.py
+          fi
+
+      - name: Commit and push updated fb_posts.json
+        run: |
+          git config --global user.name "imoneylove-bot"
+          git config --global user.email "b9234060@users.noreply.github.com"
+          git add fb_posts.json assets/fb/ 2>/dev/null || git add fb_posts.json
+          if git diff --staged --quiet; then
+            echo "No new Facebook updates."
+          else
+            git commit -m "chore(fb-sync): update Facebook articles"
+            git push
+          fi
+
+      - name: Close synced owner Issue
+        if: github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "✅ 已自動將您的 Facebook 文章同步至官網（https://b9234060.github.io/fb.html），網站將於約 30 秒內完成部署。"
+          gh issue close "$ISSUE_NUMBER" --reason completed
