@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Facebook 專欄文章同步中心 | I級投資客日記 (@imoneyx)</title>
-  <meta name="description" content="I級投資客日記 Facebook 粉絲專頁 (fb.com/imoneyx) 官方同步文章頁面。完整收錄《給摯友的一封清醒信》、不動產與台美股實戰筆記、Reels 精華與直播貼文。" />
+  <title>Facebook 專欄文章 | i級投資客日記</title>
+  <meta name="description" content="i級投資客日記 (@imoneyx) Facebook 粉絲專頁同步文章。收錄市場清醒信、實戰筆記與直播精華。" />
   <link rel="icon" href="https://avatars.githubusercontent.com/u/273367786?v=4" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -18,16 +18,6 @@
           fontFamily: {
             sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            brand: {
-              bg: '#06080F',
-              card: '#0D121F',
-              border: '#1E293B',
-              gold: '#F59E0B',
-              cyan: '#06B6D4',
-              indigo: '#6366F1'
-            }
           }
         }
       }
@@ -35,352 +25,121 @@
   </script>
   <style>
     body {
-      background-color: #06080F;
-      color: #F8FAFC;
+      background-color: #09090B;
+      color: #F4F4F5;
       overflow-x: hidden;
     }
-    .bg-grid-pattern {
-      background-size: 40px 40px;
-      background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    }
-    .glass-card {
-      background: rgba(13, 18, 31, 0.78);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .glass-card:hover {
-      border-color: rgba(6, 182, 212, 0.4);
-      transform: translateY(-3px);
-      box-shadow: 0 20px 40px -15px rgba(6, 182, 212, 0.15);
-    }
-    .glass-static {
-      background: rgba(13, 18, 31, 0.78);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .gradient-text {
-      background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 50%, #38BDF8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #D97706 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #06080F; }
-    ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #09090B; }
+    ::-webkit-scrollbar-thumb { background: #27272A; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3F3F46; }
   </style>
 </head>
-<body class="bg-grid-pattern antialiased selection:bg-cyan-500 selection:text-black">
+<body class="antialiased selection:bg-white selection:text-black">
 
-  <!-- Ambient Glow Orbs -->
-  <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-blue-600/15 blur-[130px] pointer-events-none z-0"></div>
-  <div class="fixed top-[20%] right-[-10%] w-[450px] h-[450px] rounded-full bg-cyan-500/10 blur-[130px] pointer-events-none z-0"></div>
-  <div class="fixed bottom-[-10%] left-[30%] w-[500px] h-[500px] rounded-full bg-amber-500/10 blur-[140px] pointer-events-none z-0"></div>
-
-  <!-- Navigation Header -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-[#06080F]/85 backdrop-blur-xl">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3.5 group">
-        <div class="relative">
-          <img src="https://avatars.githubusercontent.com/u/273367786?v=4" alt="i級投資客日記" class="w-11 h-11 rounded-full object-cover ring-2 ring-amber-500/60 group-hover:ring-cyan-400 transition" />
-          <span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-emerald-500 border-2 border-[#06080F] rounded-full animate-pulse" title="每日自動同步中"></span>
-        </div>
-        <div>
-          <div class="flex items-center gap-2">
-            <span class="font-bold text-lg tracking-tight text-white">i級投資客日記</span>
-            <span class="text-[11px] font-mono uppercase px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30">FB Sync</span>
-          </div>
-          <p class="text-xs text-slate-400 font-mono">@imoneyx · Facebook 專欄文章同步站</p>
-        </div>
+  <!-- Minimal Top Navigation -->
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#09090B]/90 backdrop-blur-md">
+    <div class="max-w-4xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="https://avatars.githubusercontent.com/u/273367786?v=4" alt="i級投資客日記" class="w-8 h-8 rounded-full object-cover ring-1 ring-white/20" />
+        <span class="font-semibold text-sm sm:text-base tracking-tight text-white group-hover:text-zinc-300 transition">i級投資客日記</span>
       </a>
 
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
-        <a href="index.html#live-hub" class="hover:text-cyan-400 transition">每日直播覆盤</a>
-        <a href="fb.html" class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1">FB 專欄文章</a>
-        <a href="index.html#video-archive" class="hover:text-cyan-400 transition">全頻道影音庫</a>
-        <a href="index.html#core-strategy" class="hover:text-cyan-400 transition">四大實戰模型</a>
-        <a href="index.html#truths" class="hover:text-cyan-400 transition">致富真相語錄</a>
-      </nav>
-
-      <div class="flex items-center gap-3">
+      <nav class="flex items-center gap-5 sm:gap-7 text-xs sm:text-sm text-zinc-400">
+        <a href="index.html" class="hover:text-white transition">直播首頁</a>
+        <a href="fb.html" class="text-white font-medium">FB 文章</a>
         <a href="https://www.facebook.com/imoneyx/" target="_blank" rel="noopener"
-           class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold bg-blue-500/15 text-blue-300 border border-blue-500/30 hover:bg-blue-500/25 transition">
-          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          <span>追蹤 FB 粉專</span>
+           class="px-3.5 py-1.5 rounded-full border border-white/15 text-zinc-200 hover:bg-white hover:text-black transition font-medium">
+          追蹤粉專 ↗
         </a>
-        <a href="https://www.youtube.com/@imoneylove?sub_confirmation=1" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-gradient-to-r from-red-600 to-rose-600 text-white hover:from-red-500 hover:to-rose-500 shadow-lg shadow-red-600/25 transition">
-          <span>訂閱 YouTube</span>
-        </a>
-      </div>
-    </div>
-    <!-- Mobile quick sub-nav -->
-    <div class="md:hidden border-t border-white/5 px-4 py-2 flex items-center gap-4 overflow-x-auto text-xs font-medium text-slate-300">
-      <a href="index.html" class="shrink-0 hover:text-cyan-400">← 回首頁直播</a>
-      <a href="#featured-essay" class="shrink-0 text-cyan-400 font-bold">置頂清醒信</a>
-      <a href="#fb-archive" class="shrink-0 hover:text-cyan-400">全部文章庫</a>
-      <a href="#sync-guide" class="shrink-0 hover:text-amber-400">自動同步設定</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Hero & Official Facebook Page Card -->
-  <section class="relative z-10 pt-10 pb-14 lg:pt-16 lg:pb-20 border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <!-- Left Intro -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-mono">
-            <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
-            <span>FACEBOOK PAGE SYNC · facebook.com/imoneyx</span>
-          </div>
+  <main class="max-w-3xl mx-auto px-5">
 
-          <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-[1.18]">
-            <span class="gold-gradient-text">I級投資客日記</span><br />
-            <span class="gradient-text">Facebook 專欄文章與清醒手札</span>
-          </h1>
-
-          <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
-            將 Facebook 粉絲專頁（<code class="text-cyan-300 font-mono text-xs bg-white/5 px-1.5 py-0.5 rounded">@imoneyx</code>）發布的市場清醒信、長篇財經隨筆、Reels 短片筆記與每日直播轉發貼文，自動同步匯集至此——免登入 Facebook、無演算法干擾，隨時搜尋閱讀完整版原文。
-          </p>
-
-          <!-- Verified Page Business Meta Chips -->
-          <div class="flex flex-wrap gap-3 text-xs">
-            <div class="px-3.5 py-2 rounded-xl bg-amber-500/10 border border-amber-500/25 text-amber-300 font-medium">
-              💼 槓桿諮詢單次 50 萬（附發票）
-            </div>
-            <div class="px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 text-slate-300 font-mono">
-              📧 b9234060@gmail.com
-            </div>
-            <div class="px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 text-slate-300">
-              📂 粉絲專頁 · 個人部落格
-            </div>
-          </div>
-
-          <div class="flex flex-wrap items-center gap-3 pt-1">
-            <a href="#featured-essay" class="px-5 py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25 hover:opacity-95 transition">
-              📖 閱讀置頂清醒信全文
-            </a>
-            <a href="https://www.facebook.com/imoneyx/" target="_blank" rel="noopener"
-               class="px-5 py-3 rounded-xl font-semibold text-sm bg-blue-600/20 hover:bg-blue-600/30 text-blue-200 border border-blue-500/30 transition">
-              ↗ 前往 Facebook 原專頁
-            </a>
-            <a href="#sync-guide" class="px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition">
-              ⚙️ 自動同步設定
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Official Facebook Page Plugin Widget Card -->
-        <div class="lg:col-span-5 glass-static rounded-2xl p-5 space-y-4 border border-white/10">
-          <div class="flex items-center justify-between border-b border-white/10 pb-3">
-            <div>
-              <div class="text-[11px] font-mono text-blue-400 uppercase tracking-wider">META OFFICIAL PLUGIN</div>
-              <h2 class="text-sm font-bold text-white">一鍵追蹤官方粉絲專頁</h2>
-            </div>
-            <span id="fb-sync-counter" class="text-[11px] font-mono px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-300 border border-emerald-500/25">
-              已收錄文章載入中...
-            </span>
-          </div>
-
-          <!-- Compact Page Plugin Header (Renders cleanly for ALL visitors without giant blank box) -->
-          <div class="rounded-xl overflow-hidden bg-white border border-white/10 flex justify-center">
-            <iframe id="fb-plugin-iframe"
-                    title="I級投資客日記 Facebook 粉絲專頁外掛"
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fimoneyx%2F&tabs=&width=380&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false"
-                    width="380"
-                    height="130"
-                    style="border:none;overflow:hidden;max-width:100%;"
-                    scrolling="no"
-                    frameborder="0"
-                    allowfullscreen="true"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-          </div>
-
-          <div class="flex items-center justify-between gap-2 text-xs text-slate-400">
-            <span>Page ID: <code class="font-mono text-slate-300">104929964914302</code></span>
-            <button onclick="toggleFbTimeline()" id="toggle-timeline-btn"
-                    class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-cyan-300 border border-white/10 font-mono text-[11px] transition">
-              + 展開 FB 原生動態框架
-            </button>
-          </div>
-          <p id="timeline-note" class="hidden text-[11px] text-amber-300/90 bg-amber-500/10 border border-amber-500/20 rounded-lg p-2.5 leading-relaxed">
-            💡 提示：Meta 規定未登入 Facebook 的瀏覽器僅顯示專頁資訊卡，下方「原生暗黑文章牆」則會完整顯示所有同步貼文與全文。
-          </p>
-        </div>
+    <!-- Quiet Editorial Hero -->
+    <section class="pt-12 pb-8 space-y-3">
+      <div class="text-xs font-mono tracking-widest text-zinc-500 uppercase">
+        FACEBOOK.COM / IMONEYX
       </div>
-    </div>
-  </section>
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+        Facebook 專欄文章
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-400 leading-relaxed">
+        同步粉專市場清醒信、實戰筆記與直播摘要。免登入即可閱讀全文。
+      </p>
+    </section>
 
-  <!-- Featured Essay Spotlight -->
-  <section id="featured-essay" class="relative z-10 py-14 border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-        <div>
-          <div class="text-xs font-mono text-amber-400 uppercase tracking-widest mb-1">FEATURED MANIFESTO · 置頂精選長文</div>
-          <h2 class="text-2xl sm:text-3xl font-black text-white">✍️ 最新深度手札全文</h2>
-        </div>
-        <span id="fb-last-updated" class="text-xs font-mono text-slate-400">同步狀態讀取中...</span>
-      </div>
-
-      <div id="featured-essay-container" class="glass-static rounded-2xl p-6 sm:p-8 border border-amber-500/25 shadow-2xl shadow-amber-500/5">
-        <!-- Populated dynamically from fb_posts.json -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Search, Filter & Full Articles Grid -->
-  <section id="fb-archive" class="relative z-10 py-16 border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
-        <div>
-          <div class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-1">SYNCED FACEBOOK FEED ARCHIVE</div>
-          <h2 class="text-2xl sm:text-3xl font-black text-white">📚 FB 專頁全部同步貼文庫</h2>
-          <p class="text-sm text-slate-400 mt-1">支援關鍵字搜尋、文章類型篩選，點擊任一卡片即可開啟暗黑全文閱讀模式或直接播放附帶直播影片</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-          <div class="relative">
-            <input id="fb-search-input" type="text" oninput="handleSearch(this.value)"
-                   placeholder="搜尋關鍵字（如：清醒信、空頭、房價、筆電）"
-                   class="w-full sm:w-72 pl-9 pr-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition" />
-            <svg class="w-4 h-4 text-slate-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Category Filter Tabs -->
-      <div class="flex flex-wrap items-center gap-2">
-        <button onclick="filterFbPosts('all')" id="fb-tab-all" class="px-4 py-2 rounded-xl text-xs font-bold bg-cyan-500 text-black transition">
-          全部文章
+    <!-- Single Clean Filter + Search Bar -->
+    <section class="pb-6 border-b border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex items-center gap-1.5 overflow-x-auto text-xs sm:text-sm">
+        <button onclick="setFilter('all')" id="tab-all" class="px-3.5 py-1.5 rounded-full bg-white text-black font-medium transition shrink-0">
+          全部
         </button>
-        <button onclick="filterFbPosts('essay')" id="fb-tab-essay" class="px-4 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10 transition">
-          ✍️ 深度長文與清醒信
+        <button onclick="setFilter('essay')" id="tab-essay" class="px-3.5 py-1.5 rounded-full text-zinc-400 hover:text-white hover:bg-white/5 transition shrink-0">
+          長文手札
         </button>
-        <button onclick="filterFbPosts('live_share')" id="fb-tab-live_share" class="px-4 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10 transition">
-          📺 直播同步貼文
+        <button onclick="setFilter('live_share')" id="tab-live_share" class="px-3.5 py-1.5 rounded-full text-zinc-400 hover:text-white hover:bg-white/5 transition shrink-0">
+          直播同步
         </button>
-        <button onclick="filterFbPosts('reel')" id="fb-tab-reel" class="px-4 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10 transition">
-          🎬 Reels / 生活隨筆
+        <button onclick="setFilter('reel')" id="tab-reel" class="px-3.5 py-1.5 rounded-full text-zinc-400 hover:text-white hover:bg-white/5 transition shrink-0">
+          生活短片
         </button>
       </div>
 
-      <!-- Grid -->
-      <div id="fb-posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Populated dynamically -->
+      <div class="relative w-full sm:w-56">
+        <input id="search-input" type="text" oninput="setSearch(this.value)"
+               placeholder="搜尋關鍵字..."
+               class="w-full pl-8 pr-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs sm:text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-white/30 transition" />
+        <svg class="w-3.5 h-3.5 text-zinc-500 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
       </div>
+    </section>
+
+    <!-- Minimalist Reading Feed -->
+    <section id="articles-feed" class="divide-y divide-white/10">
+      <div class="py-12 text-center text-sm text-zinc-500">載入文章中...</div>
+    </section>
+
+  </main>
+
+  <!-- Quiet Minimalist Footer -->
+  <footer class="max-w-3xl mx-auto px-5 py-12 mt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-zinc-500">
+    <div>
+      <span class="text-zinc-300 font-medium">i級投資客日記</span>
+      <span class="mx-2">·</span>
+      <span>槓桿諮詢單次 50 萬（附發票）</span>
+      <span class="mx-2">·</span>
+      <span>b9234060@gmail.com</span>
     </div>
-  </section>
-
-  <!-- Minimal-Operation Sync Guide for Owner -->
-  <section id="sync-guide" class="relative z-10 py-16 border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      <div class="max-w-3xl space-y-2">
-        <div class="text-xs font-mono text-emerald-400 uppercase tracking-widest">ZERO-EFFORT AUTOMATION ENGINE</div>
-        <h2 class="text-2xl sm:text-3xl font-black text-white">⚡ 最低限度操作：三種自動同步 FB 文章機制</h2>
-        <p class="text-sm text-slate-400">系統後台已內建 GitHub Actions 自動化機器人（<code class="font-mono text-cyan-300">sync_facebook.yml</code>），您可依喜好任選一種方式讓 FB 新貼文自動上線：</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="glass-static rounded-2xl p-6 space-y-3 border border-emerald-500/20">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono px-2.5 py-1 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">方式 1 · 100% 全自動</span>
-            <span>🤖</span>
-          </div>
-          <h3 class="text-lg font-bold text-white">Meta 官方 API 定時同步</h3>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            到您的 GitHub 倉庫 Secrets 新增一組永不過期粉絲專頁權杖（<code class="font-mono text-amber-300">FB_PAGE_ACCESS_TOKEN</code>），機器人每天自動執行 4 次，將最新 FB 文章與圖片永久存檔上線，<strong>設定完終身 0 操作</strong>。
-          </p>
-          <a href="https://github.com/b9234060/b9234060.github.io/settings/secrets/actions" target="_blank" rel="noopener"
-             class="inline-block text-xs font-mono text-emerald-400 hover:underline pt-1">
-            → 前往 GitHub Secrets 設定
-          </a>
-        </div>
-
-        <div class="glass-static rounded-2xl p-6 space-y-3 border border-cyan-500/20">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono px-2.5 py-1 rounded bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">方式 2 · 免開發者帳號</span>
-            <span>🔗</span>
-          </div>
-          <h3 class="text-lg font-bold text-white">Make.com / n8n 即時推播</h3>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            已內建 <code class="font-mono text-cyan-300">repository_dispatch</code>（事件 <code class="font-mono text-amber-300">sync-fb-post</code>）。用免費版 Make.com 登入 FB 粉專並串接 Webhook，您只要在 FB 發文，15 秒內官網同步更新。
-          </p>
-          <a href="https://github.com/b9234060/b9234060.github.io/actions/workflows/sync_facebook.yml" target="_blank" rel="noopener"
-             class="inline-block text-xs font-mono text-cyan-400 hover:underline pt-1">
-            → 查看雲端同步執行紀錄
-          </a>
-        </div>
-
-        <div class="glass-static rounded-2xl p-6 space-y-3 border border-amber-500/20">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono px-2.5 py-1 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30">方式 3 · 10 秒免設定備案</span>
-            <span>⚡</span>
-          </div>
-          <h3 class="text-lg font-bold text-white">老闆專屬一鍵發文通道</h3>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            不用申請任何 API！只要用您的 <code class="font-mono text-amber-300">b9234060</code> 帳號點擊下方連結開一則 Issue 貼上文章內容並送出，機器人驗證您的身份後 20 秒內自動排版上架到官網！
-          </p>
-          <a href="https://github.com/b9234060/b9234060.github.io/issues/new?title=%5BFB%5D%20%E8%AB%8B%E8%BC%B8%E5%85%A5%E6%96%87%E7%AB%A0%E6%A8%99%E9%A1%8C&body=%E5%8E%9F%E6%96%87%E9%80%A3%E7%B5%90%3A%20https%3A%2F%2Fwww.facebook.com%2Fimoneyx%2F%0A%0A%E8%AB%8B%E5%9C%A8%E6%AD%A4%E8%B2%BC%E4%B8%8A%20FB%20%E5%AE%8C%E6%95%B4%E6%96%87%E7%AB%A0%E5%85%A7%E5%AE%B9..." target="_blank" rel="noopener"
-             class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 hover:text-amber-200 pt-1">
-            <span>→ 立即開啟 10 秒同步發文視窗</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="relative z-10 py-12 bg-[#04060B] text-slate-400 text-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-3">
-        <img src="https://avatars.githubusercontent.com/u/273367786?v=4" alt="i級投資客日記" class="w-9 h-9 rounded-full" />
-        <div>
-          <span class="font-bold text-white">i級投資客日記 (@imoneylove / @imoneyx)</span>
-          <p class="text-xs text-slate-500">不動產投資解決方案 × 資產抗通膨增值工具 · 人生終究是場夢，我盡全力幫助你</p>
-        </div>
-      </div>
-      <div class="flex flex-wrap items-center gap-5 text-xs">
-        <a href="index.html" class="hover:text-white transition">官網首頁</a>
-        <a href="https://www.facebook.com/imoneyx/" target="_blank" rel="noopener" class="hover:text-blue-400 transition">Facebook 粉專</a>
-        <a href="https://www.youtube.com/@imoneylove" target="_blank" rel="noopener" class="hover:text-red-400 transition">YouTube 主頻道</a>
-        <a href="https://www.youtube.com/channel/UCyA2CTG24GR9-P2mgz61sOA/join" target="_blank" rel="noopener" class="hover:text-amber-400 transition">加入頻道會員</a>
-      </div>
+    <div class="flex items-center gap-4">
+      <a href="https://www.youtube.com/@imoneylove" target="_blank" rel="noopener" class="hover:text-white transition">YouTube</a>
+      <a href="https://www.facebook.com/imoneyx/" target="_blank" rel="noopener" class="hover:text-white transition">Facebook</a>
+      <button onclick="openSyncModal()" class="hover:text-white transition">同步狀態</button>
     </div>
   </footer>
 
-  <!-- Full-Text Reader Modal -->
-  <div id="article-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md" onclick="if(event.target === this) closeModal()">
-    <div class="relative w-full max-w-3xl max-h-[88vh] overflow-y-auto glass-static rounded-2xl border border-white/15 shadow-2xl p-6 sm:p-8 space-y-6">
-      <div class="flex items-start justify-between gap-4 border-b border-white/10 pb-4">
-        <div class="space-y-2">
-          <div id="modal-badges" class="flex flex-wrap items-center gap-2"></div>
-          <h3 id="modal-title" class="text-xl sm:text-2xl font-black text-white leading-snug"></h3>
-          <div id="modal-meta" class="text-xs font-mono text-slate-400"></div>
-        </div>
-        <button onclick="closeModal()" class="p-2 rounded-lg bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition shrink-0" aria-label="關閉">
-          ✕
-        </button>
+  <!-- Discreet Sync Info Modal (Only shown when clicked) -->
+  <div id="sync-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/75 backdrop-blur-sm" onclick="if(event.target === this) closeSyncModal()">
+    <div class="w-full max-w-lg rounded-2xl bg-[#111114] border border-white/15 p-6 space-y-5">
+      <div class="flex items-center justify-between">
+        <h2 class="text-base font-semibold text-white">Facebook 自動同步狀態</h2>
+        <button onclick="closeSyncModal()" class="text-zinc-400 hover:text-white text-sm">✕</button>
       </div>
-
-      <div id="modal-media"></div>
-
-      <div id="modal-body" class="text-sm sm:text-base text-slate-200 leading-[1.85] whitespace-pre-line font-normal"></div>
-
-      <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
-        <button onclick="copyPostLink()" id="modal-copy-btn" class="px-4 py-2 rounded-xl text-xs font-mono bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition">
-          🔗 複製原文連結
-        </button>
-        <a id="modal-fb-link" href="https://www.facebook.com/imoneyx/" target="_blank" rel="noopener"
-           class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-blue-600 hover:bg-blue-500 text-white transition">
-          前往 Facebook 原文按讚留言 →
-        </a>
+      <div id="sync-meta-info" class="text-xs font-mono text-zinc-400 bg-white/[0.03] rounded-xl p-3 border border-white/5"></div>
+      <div class="space-y-3 text-xs text-zinc-300 leading-relaxed">
+        <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+          <div class="font-semibold text-white">1. 全自動排程（Meta Graph API）</div>
+          <p class="text-zinc-400">於 GitHub Secrets 設定 <code class="text-zinc-200">FB_PAGE_ACCESS_TOKEN</code>，每日自動同步新貼文。</p>
+          <a href="https://github.com/b9234060/b9234060.github.io/settings/secrets/actions" target="_blank" rel="noopener" class="inline-block text-zinc-200 underline pt-0.5">前往設定 Secrets ↗</a>
+        </div>
+        <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+          <div class="font-semibold text-white">2. 一鍵發文備案（免設定 API）</div>
+          <p class="text-zinc-400">使用本人帳號（b9234060）開一則標題含 <code class="text-zinc-200">[FB]</code> 的 GitHub Issue，20 秒內自動同步上線。</p>
+          <a href="https://github.com/b9234060/b9234060.github.io/issues/new?title=%5BFB%5D%20%E8%AB%8B%E8%BC%B8%E5%85%A5%E6%A8%99%E9%A1%8C&body=%E5%8E%9F%E6%96%87%E9%80%A3%E7%B5%90%3A%20https%3A%2F%2Fwww.facebook.com%2Fimoneyx%2F%0A%0A%E8%AB%8B%E8%B2%BC%E4%B8%8A%E6%96%87%E7%AB%A0%E5%85%A7%E5%AE%B9..." target="_blank" rel="noopener" class="inline-block text-zinc-200 underline pt-0.5">開啟一鍵發文視窗 ↗</a>
+        </div>
       </div>
     </div>
   </div>
@@ -389,8 +148,8 @@
     let allPosts = [];
     let currentFilter = 'all';
     let currentSearch = '';
-    let activePostPermalink = 'https://www.facebook.com/imoneyx/';
-    let timelineExpanded = false;
+    const expandedIds = new Set();
+    const playingIds = new Set();
 
     function escapeHtml(str) {
       if (!str) return '';
@@ -410,228 +169,162 @@
       return 'https://www.facebook.com/imoneyx/';
     }
 
-    function getCategoryBadge(post) {
-      const cat = post.category || 'essay';
-      const label = escapeHtml(post.typeLabel || '粉專文章');
-      if (cat === 'essay') {
-        return `<span class="px-2.5 py-0.5 rounded text-[11px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">✍️ ${label}</span>`;
-      }
-      if (cat === 'live_share') {
-        return `<span class="px-2.5 py-0.5 rounded text-[11px] font-mono font-bold bg-red-500/20 text-red-300 border border-red-500/30">📺 ${label}</span>`;
-      }
-      return `<span class="px-2.5 py-0.5 rounded text-[11px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">🎬 ${label}</span>`;
+    function getShortCategoryLabel(cat) {
+      if (cat === 'essay') return '長文手札';
+      if (cat === 'live_share') return '直播同步';
+      return '生活短片';
     }
 
-    function toggleFbTimeline() {
-      timelineExpanded = !timelineExpanded;
-      const iframe = document.getElementById('fb-plugin-iframe');
-      const btn = document.getElementById('toggle-timeline-btn');
-      const note = document.getElementById('timeline-note');
-      if (timelineExpanded) {
-        iframe.src = 'https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fimoneyx%2F&tabs=timeline&width=380&height=420&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false';
-        iframe.height = '420';
-        btn.textContent = '− 收合 FB 原生動態框架';
-        note.classList.remove('hidden');
+    function setFilter(cat) {
+      currentFilter = cat;
+      ['all', 'essay', 'live_share', 'reel'].forEach(key => {
+        const btn = document.getElementById('tab-' + key);
+        if (!btn) return;
+        btn.className = key === cat
+          ? 'px-3.5 py-1.5 rounded-full bg-white text-black font-medium transition shrink-0'
+          : 'px-3.5 py-1.5 rounded-full text-zinc-400 hover:text-white hover:bg-white/5 transition shrink-0';
+      });
+      renderFeed();
+    }
+
+    function setSearch(val) {
+      currentSearch = val || '';
+      renderFeed();
+    }
+
+    function toggleExpand(postId) {
+      if (expandedIds.has(postId)) {
+        expandedIds.delete(postId);
       } else {
-        iframe.src = 'https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fimoneyx%2F&tabs=&width=380&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false';
-        iframe.height = '130';
-        btn.textContent = '+ 展開 FB 原生動態框架';
-        note.classList.add('hidden');
+        expandedIds.add(postId);
       }
+      renderFeed();
     }
 
-    function renderFeaturedEssay() {
-      const container = document.getElementById('featured-essay-container');
-      const featured = allPosts.find(p => p.category === 'essay') || allPosts[0];
-      if (!featured) {
-        container.innerHTML = '<p class="text-sm text-slate-400">目前尚無同步文章。</p>';
-        return;
+    function toggleVideo(postId) {
+      if (playingIds.has(postId)) {
+        playingIds.delete(postId);
+      } else {
+        playingIds.add(postId);
       }
-
-      const lines = (featured.message || '').split(/\r?\n/).filter(l => l.trim() !== '');
-      const leadLines = lines.slice(0, 12).map(l => `<p class="text-slate-200 leading-relaxed">${escapeHtml(l)}</p>`).join('');
-      const hasMore = lines.length > 12;
-
-      container.innerHTML = `
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 space-y-5">
-            <div class="flex flex-wrap items-center gap-2.5">
-              ${getCategoryBadge(featured)}
-              <span class="text-xs font-mono text-slate-400">發布時間：${escapeHtml(featured.displayDate || '')}</span>
-              ${featured.mood ? `<span class="text-xs text-blue-300 bg-blue-500/10 px-2.5 py-0.5 rounded border border-blue-500/20">✨ ${escapeHtml(featured.mood)}</span>` : ''}
-            </div>
-            <h3 class="text-2xl sm:text-3xl font-black text-white leading-snug">
-              ${escapeHtml(featured.title)}
-            </h3>
-            <div class="space-y-3 text-sm sm:text-base border-l-2 border-amber-500/50 pl-4 sm:pl-5">
-              ${leadLines}
-              ${hasMore ? `<p class="text-amber-400 font-mono text-xs pt-1">……（全文共 ${lines.length} 段核心警語，點擊右側按鈕展開完整閱讀）</p>` : ''}
-            </div>
-            <div class="flex flex-wrap items-center gap-3 pt-2">
-              <button onclick="openArticleModal('${escapeHtml(featured.id)}')"
-                      class="px-5 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-amber-500 to-orange-500 text-black hover:opacity-95 transition">
-                📖 展開閱讀完整全文（含 15 條警語）
-              </button>
-              <a href="${safeUrl(featured.permalink_url)}" target="_blank" rel="noopener"
-                 class="px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 transition">
-                ↗ 前往 Facebook 原文
-              </a>
-            </div>
-          </div>
-
-          <div class="lg:col-span-4 bg-white/[0.03] rounded-2xl p-5 border border-white/10 space-y-4">
-            <div class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-bold">📌 專欄閱讀導覽</div>
-            <div class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
-              <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                <span class="text-amber-400 font-bold block mb-0.5">核心主軸</span>
-                點破銀行買盤竭盡、融資餘額與高檔執念的殘酷真相。
-              </div>
-              <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                <span class="text-cyan-400 font-bold block mb-0.5">來源同步</span>
-                同步自 Facebook 官方粉絲專頁 <code class="text-white">@imoneyx</code> 公開貼文。
-              </div>
-            </div>
-          </div>
-        </div>
-      `;
+      renderFeed();
     }
 
-    function renderPostsGrid() {
-      const grid = document.getElementById('fb-posts-grid');
+    function openPostLink(postId) {
+      const post = allPosts.find(p => p.id === postId);
+      if (post) window.open(safeUrl(post.permalink_url), '_blank', 'noopener');
+    }
+
+    function renderFeed() {
+      const feed = document.getElementById('articles-feed');
       const query = currentSearch.trim().toLowerCase();
 
       const filtered = allPosts.filter(post => {
-        const matchCat = currentFilter === 'all' || post.category === currentFilter;
-        if (!matchCat) return false;
+        if (currentFilter !== 'all' && post.category !== currentFilter) return false;
         if (!query) return true;
-        const hay = `${post.title || ''} ${post.message || ''} ${post.mood || ''}`.toLowerCase();
-        return hay.includes(query);
+        const text = `${post.title || ''} ${post.message || ''}`.toLowerCase();
+        return text.includes(query);
       });
 
       if (filtered.length === 0) {
-        grid.innerHTML = `
-          <div class="col-span-full glass-static rounded-2xl p-10 text-center space-y-2">
-            <div class="text-2xl">🔍</div>
-            <p class="text-slate-300 font-semibold">找不到符合「${escapeHtml(currentSearch)}」的 FB 文章</p>
-            <p class="text-xs text-slate-500">請清除搜尋關鍵字或切換其他分類標籤查看</p>
-          </div>
-        `;
+        feed.innerHTML = `<div class="py-16 text-center text-sm text-zinc-500">找不到符合條件的文章</div>`;
         return;
       }
 
-      grid.innerHTML = filtered.map(post => {
-        const snippet = (post.message || '').replace(/\s+/g, ' ').trim().slice(0, 130);
-        const imgHtml = post.image
-          ? `<div class="relative aspect-video bg-slate-900 overflow-hidden">
-               <img src="${safeUrl(post.image)}"
-                    alt="${escapeHtml(post.title)}"
-                    loading="lazy"
-                    onerror="this.parentElement.style.display='none'"
-                    class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-               <div class="absolute inset-0 bg-gradient-to-t from-[#0D121F] via-transparent to-transparent"></div>
-             </div>`
-          : `<div class="px-5 pt-5 pb-1 flex items-center justify-between">
-               <span class="w-8 h-1 rounded-full bg-gradient-to-r from-amber-400 to-cyan-400"></span>
-               <span class="text-[11px] font-mono text-slate-500">FB POST</span>
-             </div>`;
+      feed.innerHTML = filtered.map(post => {
+        const rawMsg = (post.message || '').trim();
+        const lines = rawMsg.split(/\r?\n/);
+        const bodyText = (lines[0] && post.title && lines[0].trim().startsWith(post.title.slice(0, 15)))
+          ? lines.slice(1).join('\n').trim()
+          : rawMsg;
+
+        const isLong = bodyText.length > 180;
+        const isExpanded = expandedIds.has(post.id);
+        const displayBody = (!isLong || isExpanded)
+          ? bodyText
+          : bodyText.slice(0, 180).trim() + '……';
+
+        const isPlaying = playingIds.has(post.id);
+        const hasYoutube = Boolean(post.youtubeId);
 
         return `
-          <article onclick="openArticleModal('${escapeHtml(post.id)}')" class="glass-card rounded-2xl overflow-hidden cursor-pointer group flex flex-col justify-between">
-            <div>
-              ${imgHtml}
-              <div class="p-5 space-y-3">
-                <div class="flex flex-wrap items-center justify-between gap-2">
-                  ${getCategoryBadge(post)}
-                  <span class="text-[11px] font-mono text-slate-400">${escapeHtml(post.displayDate || '')}</span>
-                </div>
-                <h3 class="font-bold text-base sm:text-lg text-white group-hover:text-cyan-400 transition line-clamp-2 leading-snug">
+          <article class="py-8 sm:py-10 space-y-4">
+            <!-- Quiet Metadata Line -->
+            <div class="flex items-center gap-2.5 text-xs font-mono text-zinc-500">
+              <span>${escapeHtml(post.displayDate || '')}</span>
+              <span>·</span>
+              <span class="text-zinc-400">${getShortCategoryLabel(post.category)}</span>
+              ${post.mood ? `<span>·</span><span>${escapeHtml(post.mood)}</span>` : ''}
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-6">
+              <div class="space-y-3 flex-1 min-w-0">
+                <!-- Headline -->
+                <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white leading-snug">
                   ${escapeHtml(post.title)}
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-400 line-clamp-3 leading-relaxed">
-                  ${escapeHtml(snippet)}${(post.message || '').length > 130 ? '...' : ''}
-                </p>
+                </h2>
+
+                <!-- Clean Body -->
+                ${bodyText ? `<div class="text-sm sm:text-[15px] text-zinc-300 leading-[1.85] whitespace-pre-line">${escapeHtml(displayBody)}</div>` : ''}
+
+                <!-- Minimal Action Row -->
+                <div class="pt-1 flex flex-wrap items-center gap-4 text-xs font-medium">
+                  ${isLong ? `
+                    <button onclick="toggleExpand('${escapeHtml(post.id)}')" class="text-amber-400 hover:text-amber-300 transition">
+                      ${expandedIds.has(post.id) ? '收合內文 ↑' : '展開閱讀全文 ↓'}
+                    </button>
+                  ` : ''}
+                  ${hasYoutube ? `
+                    <button onclick="toggleVideo('${escapeHtml(post.id)}')" class="text-zinc-200 hover:text-white transition">
+                      ${isPlaying ? '收合影片' : '▶ 播放直播影片'}
+                    </button>
+                  ` : ''}
+                  <a href="${safeUrl(post.permalink_url)}" target="_blank" rel="noopener" class="text-zinc-400 hover:text-white transition">
+                    查看 FB 原文 ↗
+                  </a>
+                </div>
               </div>
+
+              <!-- Optional Compact Thumbnail (Only when not playing inline video) -->
+              ${post.image && !isPlaying ? `
+                <button onclick="${hasYoutube ? `toggleVideo('${escapeHtml(post.id)}')` : `openPostLink('${escapeHtml(post.id)}')`}"
+                        class="sm:w-44 aspect-video rounded-xl overflow-hidden bg-zinc-900 border border-white/10 shrink-0 group relative">
+                  <img src="${safeUrl(post.image)}"
+                       alt="${escapeHtml(post.title)}"
+                       loading="lazy"
+                       onerror="this.parentElement.style.display='none'"
+                       class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition duration-300" />
+                </button>
+              ` : ''}
             </div>
-            <div class="px-5 pb-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono">
-              <span class="text-slate-500 truncate max-w-[160px]">${post.mood ? escapeHtml(post.mood) : 'fb.com/imoneyx'}</span>
-              <span class="text-cyan-400 group-hover:translate-x-1 transition shrink-0">閱讀全文 →</span>
-            </div>
+
+            <!-- Inline YouTube Player when requested -->
+            ${hasYoutube && isPlaying ? `
+              <div class="pt-2">
+                <div class="relative pt-[56.25%] rounded-xl overflow-hidden bg-black border border-white/10">
+                  <iframe class="absolute inset-0 w-full h-full"
+                          src="https://www.youtube.com/embed/${escapeHtml(post.youtubeId)}?autoplay=1&rel=0"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen></iframe>
+                </div>
+              </div>
+            ` : ''}
           </article>
         `;
       }).join('');
     }
 
-    function openArticleModal(postId) {
-      const post = allPosts.find(p => p.id === postId);
-      if (!post) return;
-
-      activePostPermalink = safeUrl(post.permalink_url);
-      document.getElementById('modal-badges').innerHTML = getCategoryBadge(post);
-      document.getElementById('modal-title').textContent = post.title || '';
-      document.getElementById('modal-meta').textContent =
-        `發布日期：${post.displayDate || ''}${post.mood ? ' · ' + post.mood : ''}`;
-      document.getElementById('modal-body').textContent = post.message || '';
-      document.getElementById('modal-fb-link').href = activePostPermalink;
-
-      const mediaEl = document.getElementById('modal-media');
-      if (post.youtubeId) {
-        mediaEl.innerHTML = `
-          <div class="relative pt-[56.25%] rounded-xl overflow-hidden bg-black border border-white/10">
-            <iframe class="absolute inset-0 w-full h-full"
-                    src="https://www.youtube.com/embed/${escapeHtml(post.youtubeId)}?rel=0"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-          </div>`;
-      } else if (post.image) {
-        mediaEl.innerHTML = `
-          <div class="rounded-xl overflow-hidden border border-white/10 bg-slate-900">
-            <img src="${safeUrl(post.image)}" alt="${escapeHtml(post.title)}"
-                 onerror="this.parentElement.style.display='none'"
-                 class="w-full max-h-80 object-cover" />
-          </div>`;
-      } else {
-        mediaEl.innerHTML = '';
-      }
-
-      const modal = document.getElementById('article-modal');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      document.body.style.overflow = 'hidden';
+    function openSyncModal() {
+      const m = document.getElementById('sync-modal');
+      m.classList.remove('hidden');
+      m.classList.add('flex');
     }
 
-    function closeModal() {
-      const modal = document.getElementById('article-modal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      document.getElementById('modal-media').innerHTML = '';
-      document.body.style.overflow = '';
-    }
-
-    function copyPostLink() {
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(activePostPermalink);
-        const btn = document.getElementById('modal-copy-btn');
-        btn.textContent = '✓ 已複製原文連結';
-        setTimeout(() => { btn.textContent = '🔗 複製原文連結'; }, 2000);
-      }
-    }
-
-    function filterFbPosts(cat) {
-      currentFilter = cat;
-      ['all', 'essay', 'live_share', 'reel'].forEach(k => {
-        const btn = document.getElementById('fb-tab-' + k);
-        if (!btn) return;
-        btn.className = k === cat
-          ? 'px-4 py-2 rounded-xl text-xs font-bold bg-cyan-500 text-black transition'
-          : 'px-4 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10 transition';
-      });
-      renderPostsGrid();
-    }
-
-    function handleSearch(val) {
-      currentSearch = val || '';
-      renderPostsGrid();
+    function closeSyncModal() {
+      const m = document.getElementById('sync-modal');
+      m.classList.add('hidden');
+      m.classList.remove('flex');
     }
 
     async function loadFbPosts() {
@@ -641,28 +334,22 @@
         const data = await res.json();
         allPosts = data.posts || [];
 
-        const counterEl = document.getElementById('fb-sync-counter');
-        if (counterEl) {
-          counterEl.textContent = `✓ 已收錄 ${allPosts.length} 篇專欄文章`;
-        }
-        const updatedEl = document.getElementById('fb-last-updated');
-        if (updatedEl && data.lastUpdated) {
-          const d = new Date(data.lastUpdated);
-          const formatted = isNaN(d) ? data.lastUpdated : d.toLocaleString('zh-TW');
-          updatedEl.textContent = `⚡ 最近同步：${formatted}`;
+        const infoEl = document.getElementById('sync-meta-info');
+        if (infoEl) {
+          const d = data.lastUpdated ? new Date(data.lastUpdated).toLocaleString('zh-TW') : '-';
+          infoEl.textContent = `Page ID: ${data.pageId || '104929964914302'} | 已同步文章: ${allPosts.length} 篇 | 更新時間: ${d}`;
         }
 
-        renderFeaturedEssay();
-        renderPostsGrid();
+        renderFeed();
       } catch (err) {
-        console.error('Failed to load fb_posts.json:', err);
-        document.getElementById('featured-essay-container').innerHTML =
-          '<p class="text-sm text-rose-400">載入 Facebook 文章資料庫時發生錯誤，請重新整理頁面。</p>';
+        console.error(err);
+        document.getElementById('articles-feed').innerHTML =
+          '<div class="py-12 text-center text-sm text-zinc-500">暫時無法載入文章，請重新整理頁面。</div>';
       }
     }
 
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeModal();
+      if (e.key === 'Escape') closeSyncModal();
     });
     document.addEventListener('DOMContentLoaded', loadFbPosts);
   </script>
