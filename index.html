@@ -109,8 +109,12 @@
         </div>
       </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
         <a href="#live-hub" class="hover:text-cyan-400 transition">每日直播覆盤</a>
+        <a href="fb.html" class="hover:text-cyan-400 transition flex items-center gap-1.5">
+          <span>FB 專欄文章</span>
+          <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30">NEW</span>
+        </a>
         <a href="#video-archive" class="hover:text-cyan-400 transition">全頻道影音庫</a>
         <a href="#core-strategy" class="hover:text-cyan-400 transition">四大實戰模型</a>
         <a href="#truths" class="hover:text-cyan-400 transition">致富真相語錄</a>
@@ -152,6 +156,9 @@
           <div class="flex flex-wrap items-center gap-4 pt-2">
             <a href="#live-hub" class="px-6 py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25 hover:opacity-95 transition flex items-center gap-2">
               <span>▶ 觀看今日最新直播與重點筆記</span>
+            </a>
+            <a href="fb.html" class="px-5 py-3.5 rounded-xl font-bold text-sm bg-blue-500/15 hover:bg-blue-500/25 text-blue-200 border border-blue-500/30 transition">
+              📝 FB 專欄文章與清醒信
             </a>
             <a href="https://www.youtube.com/playlist?list=UUMOyA2CTG24GR9-P2mgz61sOA" target="_blank" rel="noopener"
                class="px-6 py-3.5 rounded-xl font-semibold text-sm bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 transition">
@@ -294,6 +301,26 @@
     </div>
   </section>
 
+  <!-- Synced Facebook Articles Spotlight -->
+  <section id="fb-spotlight" class="relative z-10 py-16 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-1">FACEBOOK PAGE SYNC · @imoneyx</div>
+          <h2 class="text-2xl sm:text-3xl font-black text-white">📝 Facebook 專欄文章與清醒手札</h2>
+          <p class="text-sm text-slate-400 mt-1">自動同步 Facebook 粉絲專頁長篇觀點、清醒信與實戰筆記</p>
+        </div>
+        <a href="fb.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/20 transition shrink-0">
+          <span>進入 FB 專欄文章完整頁面 →</span>
+        </a>
+      </div>
+
+      <div id="home-fb-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Populated dynamically from fb_posts.json -->
+      </div>
+    </div>
+  </section>
+
   <!-- Core Investment Pillars (Roamer-Tech B2B Solution Style) -->
   <section id="core-strategy" class="relative z-10 py-16 border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
@@ -405,6 +432,8 @@
         </div>
       </div>
       <div class="flex flex-wrap items-center gap-5 text-xs">
+        <a href="fb.html" class="hover:text-blue-400 transition">FB 專欄文章頁面</a>
+        <a href="https://www.facebook.com/imoneyx/" target="_blank" rel="noopener" class="hover:text-blue-400 transition">Facebook 粉專</a>
         <a href="https://www.youtube.com/@imoneylove" target="_blank" rel="noopener" class="hover:text-white transition">YouTube 主頻道</a>
         <a href="https://www.youtube.com/channel/UCyA2CTG24GR9-P2mgz61sOA/join" target="_blank" rel="noopener" class="hover:text-amber-400 transition">加入頻道會員</a>
         <a href="https://www.youtube.com/playlist?list=UUMOyA2CTG24GR9-P2mgz61sOA" target="_blank" rel="noopener" class="hover:text-cyan-400 transition">會員專屬影片</a>
@@ -649,12 +678,61 @@
       }
     }
 
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    async function loadHomeFbSpotlight() {
+      const grid = document.getElementById('home-fb-grid');
+      if (!grid) return;
+      try {
+        const res = await fetch('./fb_posts.json?t=' + Date.now());
+        if (!res.ok) return;
+        const data = await res.json();
+        const posts = (data.posts || []).slice(0, 3);
+        grid.innerHTML = posts.map(post => {
+          const excerpt = (post.message || '').replace(/\s+/g, ' ').trim().slice(0, 110);
+          return `
+            <a href="fb.html" class="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-4 group">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between gap-2 text-[11px] font-mono">
+                  <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30">${escapeHtml(post.typeLabel || 'FB 貼文')}</span>
+                  <span class="text-slate-400">${escapeHtml(post.displayDate || '')}</span>
+                </div>
+                <h3 class="font-bold text-base text-white group-hover:text-cyan-400 transition line-clamp-2 leading-snug">
+                  ${escapeHtml(post.title)}
+                </h3>
+                <p class="text-xs text-slate-400 line-clamp-3 leading-relaxed">
+                  ${escapeHtml(excerpt)}${(post.message || '').length > 110 ? '...' : ''}
+                </p>
+              </div>
+              <div class="pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono text-cyan-400">
+                <span>fb.com/imoneyx</span>
+                <span class="group-hover:translate-x-1 transition">閱讀全文 →</span>
+              </div>
+            </a>
+          `;
+        }).join('');
+      } catch (e) {
+        console.warn('Could not load FB spotlight:', e);
+      }
+    }
+
     function manualRefresh() {
       document.getElementById('last-updated-text').textContent = '正在即時抓取 YouTube 最新直播...';
       loadVideos();
     }
 
-    document.addEventListener('DOMContentLoaded', loadVideos);
+    document.addEventListener('DOMContentLoaded', () => {
+      loadVideos();
+      loadHomeFbSpotlight();
+    });
   </script>
 </body>
 </html>
