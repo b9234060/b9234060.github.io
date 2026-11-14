@@ -1,7 +1,9 @@
 import urllib.request
+import urllib.error
 import xml.etree.ElementTree as ET
 import json
 import os
+import time
 from datetime import datetime, timezone
 
 CHANNEL_ID = "UCyA2CTG24GR9-P2mgz61sOA"
@@ -56,8 +58,18 @@ def fetch_videos():
         RSS_URL,
         headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     )
-    with urllib.request.urlopen(req, timeout=20) as resp:
-        xml_data = resp.read()
+    xml_data = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                xml_data = resp.read()
+            break
+        except (urllib.error.URLError, urllib.error.HTTPError) as exc:
+            if attempt == 2:
+                print(f"Warning: YouTube RSS unavailable ({exc}); preserving existing videos.json.")
+                return
+            print(f"Attempt {attempt + 1} failed ({exc}), retrying in {2 ** attempt}s...")
+            time.sleep(2 ** attempt)
 
     root = ET.fromstring(xml_data)
     entries = []
