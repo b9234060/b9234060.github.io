@@ -3,28 +3,80 @@
   "channelTitle": "i級投資客日記",
   "channelHandle": "@imoneylove",
   "channelUrl": "https://www.youtube.com/@imoneylove",
-  "lastUpdated": "2026-11-15T18:50:00.773712+00:00",
+  "lastUpdated": "2026-11-16T21:59:46.222939+00:00",
   "videos": [
     {
+      "videoId": "vDEe5qWbU4U",
+      "title": "第1316集 一檔「聚隆四」學透 CBAS 變相配息・槓桿與續約 #可轉債選擇權 #可轉換公司債 #直播20261116",
+      "published": "2026-11-16T10:19:40+00:00",
+      "updated": "2026-11-16T11:08:23+00:00",
+      "views": 79,
+      "category": "live",
+      "thumbnail": "https://i.ytimg.com/vi/vDEe5qWbU4U/maxresdefault.jpg",
+      "fallbackThumbnail": "https://i.ytimg.com/vi/vDEe5qWbU4U/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=vDEe5qWbU4U",
+      "summaryPoints": [],
+      "timestamps": [],
+      "description": ""
+    },
+    {
       "videoId": "D5-1tBAEc60",
-      "title": "第1315集 小台指配 SC 與 SP 全圖解 看懂鎖利、收租與限時保單 #選擇權教學 #期權教學 #選擇權 #期權 #直播20261115",
-      "published": "2026-11-15T08:38:28+00:00",
-      "updated": "2026-11-15T10:23:02+00:00",
-      "views": 82,
+      "title": "第1315集 你真的懂選擇權嗎？把小台指當成 4,000 萬房子出租，看懂鎖利與收租數學原理  #選擇權教學 #期權教學 #選擇權 #期權 #直播20261115",
+      "published": "2026-11-15T21:57:56+00:00",
+      "updated": "2026-11-16T17:10:33+00:00",
+      "views": 114,
       "category": "live",
       "thumbnail": "https://i.ytimg.com/vi/D5-1tBAEc60/maxresdefault.jpg",
       "fallbackThumbnail": "https://i.ytimg.com/vi/D5-1tBAEc60/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=D5-1tBAEc60",
-      "summaryPoints": [],
-      "timestamps": [],
-      "description": ""
+      "summaryPoints": [
+        "契約規格 1 比 1 對照原則：台指選擇權每點 50 元，剛好與 1 口小台指（每點 50 元）完全對等；1 口大台（每點 200 元）對應 4 口選擇權，微台（每點 10 元）則需 5 口對應 1 口選擇權，比例對等才能精準計算風險。",
+        "用買房邏輯秒懂選擇權（以 40,000 點為教學範例）：",
+        "六大組合與三種配置思維：多單與空單架構完全左右對稱。想多賺點數可選「純收租版」（但期貨必須嚴設停損）；想穩健睡得著可選「限時保單版」（用賣方收的 200 點租金去付 200 點保費，實現零元保費風險封頂）；想連盤整都多賺可選「買遠省保費版」（買更遠履約價省下一半保費）。",
+        "必避的三大操作地雷：第一，多單不可同時賣出賣權（SP），否則跌破履約價會變成雙倍虧損；第二，口數必須嚴守 1 比 1，絕不超賣；第三，期貨與選擇權必須下在同一個保證金帳戶，才能自動互抵保證金。"
+      ],
+      "timestamps": [
+        {
+          "time": "00:00:16",
+          "label": "開場破題：用不動產買房比喻，3 分鐘聽懂期貨與選擇權白話邏輯"
+        },
+        {
+          "time": "00:02:42",
+          "label": "契約規格換算：大台、小台、微台 1 比 4 比 20 比例與選擇權 1 比 1 對照"
+        },
+        {
+          "time": "00:07:42",
+          "label": "選擇權四大角色：買方付保費（BC、BP）vs. 賣方當房東收租（SC、SP）"
+        },
+        {
+          "time": "00:10:43",
+          "label": "買房保單比喻：4,000 萬房子收 20 萬訂金、買 20 萬保單的數學損益圖解"
+        },
+        {
+          "time": "00:23:37",
+          "label": "六大實戰組合：純收租版、限時保單版、買遠省保費版的對稱結構"
+        },
+        {
+          "time": "00:38:15",
+          "label": "四種行情損益對照：盤整、大漲、大跌與極端波動下的風險封頂原理"
+        },
+        {
+          "time": "00:43:48",
+          "label": "三大操作地雷：嚴禁同向雙賣變 2 倍槓桿、嚴守 1 比 1 比例、同帳戶互抵"
+        },
+        {
+          "time": "00:59:06",
+          "label": "進階策略補充：結算日跨式雙買與週五夜盤深價外雙賣的時間價值原理"
+        }
+      ],
+      "description": "第1315集 小台指配 SC 與 SP 全圖解！用買房邏輯看懂期權收租、鎖利與限時保單\n\n影片時間軸：\n00:00:16 開場破題：用不動產買房比喻，3 分鐘聽懂期貨與選擇權白話邏輯\n00:02:42 契約規格換算：大台、小台、微台 1 比 4 比 20 比例與選擇權 1 比 1 對照\n00:07:42 選擇權四大角色：買方付保費（BC、BP）vs. 賣方當房東收租（SC、SP）\n00:10:43 買房保單比喻：4,000 萬房子收 20 萬訂金、買 20 萬保單的數學損益圖解\n00:23:37 六大實戰組合：純收租版、限時保單版、買遠省保費版的對稱結構\n00:38:15 四種行情損益對照：盤整、大漲、大跌與極端波動下的風險封頂原理\n00:43:48 三大操作地雷：嚴禁同向雙賣變 2 倍槓桿、嚴守 1 比 1 比例、同帳戶互抵\n00:59:06 進階策略補充：結算日跨式雙買與週五夜盤深價外雙賣的時間價值原理\n\n本集核心重點：\n• 契約規格 1 比 1 對照原則：台指選擇權每點 50 元，剛好與 1 口小台指（每點 50 元）完全對等；1 口大台（每點 200 元）對應 4 口選擇權，微台（每點 10 元）則需 5 口對應 1 口選擇權，比例對等才能精準計算風險。\n• 用買房邏輯秒懂選擇權（以 40,000 點為教學範例）：\n1. 期貨多單等於「買下一間 4,000 萬的房子」。\n2. 賣出買權（SC，41,000 點收 200 點）等於「先收買家 20 萬預售訂金」，約定最多 4,100 萬賣出，沒漲過就白賺 20 萬租金，漲過則鎖住 1,200 點獲利上限。\n3. 買進賣權（BP，39,000 點付 200 點）等於「花 20 萬買房價下跌保單」，萬一房價暴跌，3,900 萬以下的跌幅全由保單理賠抵銷，最大虧損鎖死在 1,000 點（100 萬）。\n• 六大組合與三種配置思維：多單與空單架構完全左右對稱。想多賺點數可選「純收租版」（但期貨必須嚴設停損）；想穩健睡得著可選「限時保單版」（用賣方收的 200 點租金去付 200 點保費，實現零元保費風險封頂）；想連盤整都多賺可選「買遠省保費版」（買更遠履約價省下一半保費）。\n• 必避的三大操作地雷：第一，多單不可同時賣出賣權（SP），否則跌破履約價會變成雙倍虧損；第二，口數必須嚴守 1 比 1，絕不超賣；第三，期貨與選擇權必須下在同一個保證金帳戶，才能自動互抵保證金。\n\n免責聲明：\n本影片內容僅為個人投資經驗、金融衍生商品結構與數學損益試算之知識教學分享，文中點位與權利金數值均為教學假設範例，不構成任何證券、期貨、選擇權或金融商品之買賣推薦、招攬或未來走勢預測。衍生性金融商品具備高槓桿與高波動風險，投資人應獨立判斷並自負投資盈虧。"
     },
     {
       "videoId": "_EUFBmcPfb0",
       "title": "1315集簡報 選擇權教學課程系列 財富自由主動技能",
       "published": "2026-11-15T04:36:57+00:00",
       "updated": "2026-11-15T15:39:01+00:00",
-      "views": 14,
+      "views": 21,
       "category": "briefing",
       "thumbnail": "https://i.ytimg.com/vi/_EUFBmcPfb0/maxresdefault.jpg",
       "fallbackThumbnail": "https://i.ytimg.com/vi/_EUFBmcPfb0/hqdefault.jpg",
@@ -38,7 +90,7 @@
       "title": "第1314集 黃金比特幣抗通膨只是迷思？美元獨強下的跨資產技術圖解！從 TXO 選擇權數據看懂法人避險動向 Put/Call Ratio 數據揭露法人態度港美科網股技術型態覆盤 #直播20261114",
       "published": "2026-11-14T22:28:26+00:00",
       "updated": "2026-11-15T10:45:51+00:00",
-      "views": 91,
+      "views": 97,
       "category": "live",
       "thumbnail": "https://i.ytimg.com/vi/NzmyaWrF1vQ/maxresdefault.jpg",
       "fallbackThumbnail": "https://i.ytimg.com/vi/NzmyaWrF1vQ/hqdefault.jpg",
@@ -90,7 +142,7 @@
       "title": "第1313集 國安基金護盤夜盤怎麼看？微台分批操作 SOP 公開！拆解盤中買盤竭盡訊號與選擇權以小博大邏輯 停損怕砍在阿呆谷？1% 資金選擇權不對稱避險法！週三結算跨式雙買 #直播20261113",
       "published": "2026-11-14T19:20:40+00:00",
       "updated": "2026-11-15T05:25:33+00:00",
-      "views": 54,
+      "views": 66,
       "category": "live",
       "thumbnail": "https://i.ytimg.com/vi/iIDpXkvo2H0/maxresdefault.jpg",
       "fallbackThumbnail": "https://i.ytimg.com/vi/iIDpXkvo2H0/hqdefault.jpg",
@@ -142,7 +194,7 @@
       "title": "第1312集 台積電赤壁之戰火燒連環船與基金ETF危機 大陸EUV量產×台積電估值重估 #直播20261112",
       "published": "2026-11-14T18:36:27+00:00",
       "updated": "2026-11-15T09:43:34+00:00",
-      "views": 57,
+      "views": 83,
       "category": "live",
       "thumbnail": "https://i.ytimg.com/vi/isutBihPzQY/maxresdefault.jpg",
       "fallbackThumbnail": "https://i.ytimg.com/vi/isutBihPzQY/hqdefault.jpg",
@@ -190,7 +242,7 @@
       "title": "1314集簡報",
       "published": "2026-11-14T09:08:59+00:00",
       "updated": "2026-11-15T03:05:50+00:00",
-      "views": 5,
+      "views": 8,
       "category": "briefing",
       "thumbnail": "https://i.ytimg.com/vi/gi4ryaTwCiw/maxresdefault.jpg",
       "fallbackThumbnail": "https://i.ytimg.com/vi/gi4ryaTwCiw/hqdefault.jpg",
@@ -203,8 +255,8 @@
       "videoId": "ql1hhfm-lkA",
       "title": "1313集簡報",
       "published": "2026-11-14T06:36:00+00:00",
-      "updated": "2026-11-14T06:48:16+00:00",
-      "views": 16,
+      "updated": "2026-11-15T20:23:41+00:00",
+      "views": 18,
       "category": "briefing",
       "thumbnail": "https://i.ytimg.com/vi/ql1hhfm-lkA/maxresdefault.jpg",
       "fallbackThumbnail": "https://i.ytimg.com/vi/ql1hhfm-lkA/hqdefault.jpg",
@@ -231,8 +283,8 @@
       "videoId": "h5JBSo6L6f8",
       "title": "第1311集 台股期權軌道遊戲三角函數教學 #直播20261111",
       "published": "2026-11-12T18:01:56+00:00",
-      "updated": "2026-11-14T06:38:46+00:00",
-      "views": 154,
+      "updated": "2026-11-15T22:40:09+00:00",
+      "views": 156,
       "category": "live",
       "thumbnail": "https://i.ytimg.com/vi/h5JBSo6L6f8/maxresdefault.jpg",
       "fallbackThumbnail": "https://i.ytimg.com/vi/h5JBSo6L6f8/hqdefault.jpg",
@@ -284,7 +336,7 @@
       "title": "第1310集 0050大換血預警！10檔AI股恐遭無情剔除 #直播20261110",
       "published": "2026-11-10T04:00:27+00:00",
       "updated": "2026-11-10T12:42:26+00:00",
-      "views": 1571,
+      "views": 1612,
       "category": "live",
       "thumbnail": "https://i.ytimg.com/vi/1oTLD10wgfg/maxresdefault.jpg",
       "fallbackThumbnail": "https://i.ytimg.com/vi/1oTLD10wgfg/hqdefault.jpg",
@@ -320,7 +372,7 @@
       "title": "第1309集 ETF短多殺長多、P/C Ratio揭秘主力劇本！台股狂瀉萬點後：真反彈還是逃命波？千萬別躲進美債ETF的雙殺陷阱！ #直播20261109",
       "published": "2026-11-09T00:23:39+00:00",
       "updated": "2026-11-09T12:43:34+00:00",
-      "views": 155,
+      "views": 168,
       "category": "live",
       "thumbnail": "https://i.ytimg.com/vi/qQl0fc7XMUo/maxresdefault.jpg",
       "fallbackThumbnail": "https://i.ytimg.com/vi/qQl0fc7XMUo/hqdefault.jpg",
